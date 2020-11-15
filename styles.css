@@ -72,6 +72,14 @@ h6 {
     padding: 120px 0;
 }
 
+.about-me p {
+    font-size: 1.2rem;
+}
+
+.about-me span {
+    font-weight: bolder;
+}
+
 .testing {
     padding-right: 100px;
 }
