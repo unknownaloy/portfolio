@@ -70,10 +70,17 @@ h6 {
     margin-top: 160px;
     background-color: #3fc1c9;
     padding: 120px 0;
+    text-align: center;
+}
+
+.about-me h1 {
+    line-height: 2.0;
 }
 
 .about-me p {
     font-size: 1.2rem;
+    text-align: left;
+    color: #364f6b;
 }
 
 .about-me span {
