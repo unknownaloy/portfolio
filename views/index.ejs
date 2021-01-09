@@ -1,125 +1,93 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://kit.fontawesome.com/773a46527c.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Damion&family=Lora:wght@400;500&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/css/styles.css">
-    <title>Chebe's Portfolio</title>
-</head>
-
-<body class="container-fluid p-0">
+<%- include("partials/header"); -%>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand ml-32" href="#">Chichebem</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-8" href="#">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-8" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-lg">Contact me</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<section class="landing-screen">
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand ml-32" href="#">Chichebem</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mr-8" href="#">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mr-8" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-lg">Contact me</button>
-                    </li>
-                </ul>
+        <div class="row align-items-center">
+            <div class="col-md-7 introduction">
+                <h1 class="animate__animated animate__bounce">Hi, I'm Ellis</h1>
+                <h4 class="animate__animated animate__fadeInLeft">A Mobile and Web Developer</h4>
+                <p class="animate__animated animate__fadeInLeft">I use code in solving problems while building beautiful applications to meet your needs, or to build stuffs just for fun!</p>
             </div>
-        </nav>
+            <div class="col-md-5">
+                <img class="developer-pic animate__animated animate__fadeInRight" src="images/display_pic.png">
+            </div>
+        </div>
     </div>
-    <section class="landing-screen">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-7 introduction">
-                    <h1>Hi, I'm Ellis</h1>
-                    <h4>A Mobile and Web Developer</h4>
-                    <p>I use code in solving problems while building beautiful applications to meet your needs, or to build stuffs just for fun!</p>
-                </div>
-                <div class="col-md-5">
-                    <img class="developer-pic" src="images/display_pic.png">
+</section>
+<section class="about-me">
+    <div class="container">
+        <div class="row align-items-center hiddenSection">
+            <div class="col-md-6 testing hidden">
+                <img class="about-me-pic" src="images/about_me.png">
+            </div>
+            <div class="col-md-6 hidden">
+                <h1>About Me</h1>
+                <p>Ellis is a software developer based in Owerri, Imo State, Nigeria. He began his development journey at the age of 14, and built his first website using HTML and in-line CSS. He then went on to study for 5 years at the Federal Polytechnic Nekede, Owerri, graduating with a Higher National Diploma in Biochemistry in 2016. </p>
+                <p>When Ellis is not writing codes, he loves watching movies, reading books/articles or playing video games with his friends.</p>
+                <p>Ellis hopes to help you build phenomenal applications.</p>
+                <p><span class="austin">Languages I speak:</span> Flutter & Dart, JavaScript
+                </p>
+                <p><span>Others:</span> HTML, CSS, NodeJS, ExpressJS, MongoDB, Git/GitHub, Bootstrap</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Ellisice" target="blank"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="https://github.com/unknownaloy" target="blank"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://www.instagram.com/ellisaloy/" target="blank"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/in/ellis-ifoegbu-3aa87717b/" target="blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="https://twitter.com/Ellisice" target="blank"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="https://stackoverflow.com/users/10296000/chichebe?tab=profile" target="blank"><i class="fab fa-stack-overflow fa-2x"></i></a>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="about-me">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 testing">
-                    <img class="about-me-pic" src="images/about_me.png">
-                </div>
-                <div class="col-md-6">
-                    <h1>About Me</h1>
-                    <p>Ellis is a software developer based in Owerri, Imo State, Nigeria. He began his development journey at the age of 14, and built his first website using HTML and in-line CSS. He then went on to study for 5 years at the Federal Polytechnic Nekede, Owerri, graduating with a Higher National Diploma in Biochemistry in 2016. </p>
-                    <p>When Ellis is not writing codes, he loves watching movies, reading books/articles or playing video games with his friends.</p>
-                    <p>Ellis hopes to help you build phenomenal applications.</p>
-                    <p><span class="austin">Languages I speak:</span> Flutter & Dart, JavaScript
-                    </p>
-                    <p><span>Others:</span> HTML, CSS, NodeJS, ExpressJS, MongoDB, Git/GitHub, Bootstrap</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/Ellisice" target="blank"><i class="fab fa-facebook fa-2x"></i></a>
-                        <a href="https://github.com/unknownaloy" target="blank"><i class="fab fa-github fa-2x"></i></a>
-                        <a href="https://www.instagram.com/ellisaloy/" target="blank"><i class="fab fa-instagram fa-2x"></i></a>
-                        <a href="https://www.linkedin.com/in/ellis-ifoegbu-3aa87717b/" target="blank"><i class="fab fa-linkedin fa-2x"></i></a>
-                        <a href="https://twitter.com/Ellisice" target="blank"><i class="fab fa-twitter fa-2x"></i></a>
-                        <a href="https://stackoverflow.com/users/10296000/chichebe?tab=profile" target="blank"><i class="fab fa-stack-overflow fa-2x"></i></a>
-                    </div>
-                </div>
+    </div>
+</section>
+<section class="contact-me">
+    <h1>Contact Me</h1>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4 reach-padding">
+                <p class="reach-out"><span>Reach</span><span>Out!</span></p>
+                <img src="images/telephone.svg" alt="image of a telephone" height="80" width="80" />
             </div>
-        </div>
-    </section>
-    <section class="contact-me">
-        <h1>Contact Me</h1>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-4 reach-padding">
-                    <p class="reach-out"><span>Reach</span><span>Out!</span></p>
-                    <img src="images/telephone.svg" alt="image of a telephone" height="80" width="80" />
-                </div>
-                <div class="col-md-8">
-                    <form method="POST" action="/compose">
-                        <div class="form-group">
-                            <div class="row">
-                                <label class="col-sm-2 col-form-label">Name:</label>
-                                <div class="col-sm-10"><input class="form-control" type="text" name="name"></div>
-                            </div>
-                            <div class="row"> <label class="col-sm-2 col-form-label">Heading:</label>
-                                <div class="col-sm-10"><input class="form-control" type="text" name="heading"></div>
-                            </div>
-                            <label>Message:</label>
-                            <textarea class="form-control" name="postContent" cols="20" rows="5" style="resize: none"></textarea>
+            <div class="col-md-8">
+                <form method="POST" action="/compose">
+                    <div class="form-group">
+                        <div class="row">
+                            <label class="col-sm-2 col-form-label">Name:</label>
+                            <div class="col-sm-10"><input class="form-control" type="text" name="name"></div>
                         </div>
-                        <button class="btn" type="submit">SEND</button>
-                    </form>
-                </div>
+                        <div class="row"> <label class="col-sm-2 col-form-label">Heading:</label>
+                            <div class="col-sm-10"><input class="form-control" type="text" name="heading"></div>
+                        </div>
+                        <label>Message:</label>
+                        <textarea class="form-control" name="postContent" cols="20" rows="5" style="resize: none"></textarea>
+                    </div>
+                    <button class="btn" type="submit">SEND</button>
+                </form>
             </div>
         </div>
-    </section>
-    <footer>
-        <p>ELLIS IFOEGBU © <script>
-            document.write(new Date().getFullYear())
-            </script>, ALL RIGHTS RESERVED
-        </p>
-    </footer>
-    <!-- Optional JavaScript; choose one of the two! -->
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-    -->
-</body>
-
-</html>
+    </div>
+</section>
+<%- include("partials/footer"); -%>

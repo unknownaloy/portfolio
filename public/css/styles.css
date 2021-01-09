@@ -191,6 +191,6 @@ footer {
     color: #f5f5f5;
 }
 
-/*.about-me img {
-    padding-right: 100px;
-}*/
+.hidden {
+    opacity: 0;
+}
