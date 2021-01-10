@@ -29,7 +29,7 @@ a {
 }
 
 .nav-item {
-    margin-left: 40px;
+    margin-left: 2.5rem; //40px
 }
 
 .nav-link {
@@ -43,11 +43,11 @@ a {
 
 
 .landing-screen {
-    margin-top: 120px;
+    margin-top: 7.5rem;
 }
 
 .landing-screen .introduction {
-    padding-right: 100px;
+    padding-right: 6.25rem;
 }
 
 
@@ -58,7 +58,7 @@ a {
 
 .landing-screen h4 {
     text-decoration: underline;
-    padding-bottom: 40px;
+    padding-bottom: 2.5rem;
 }
 
 .landing-screen p {
@@ -72,7 +72,7 @@ a {
 }
 
 .about-me {
-    margin-top: 160px;
+    margin-top: 10rem;
     background-color: #3fc1c9;
     padding: 120px 0;
     text-align: center;
@@ -93,15 +93,15 @@ a {
 }
 
 .testing {
-    padding-right: 100px;
+    padding-right: 6.25rem;
 }
 
 .social-icons {
-    margin-top: 40px;
+    margin-top: 2.5rem;
 }
 
 .social-icons i {
-    margin-right: 20px;
+    margin-right: 1.25rem;
 }
 
 .fa-facebook:hover {
@@ -157,11 +157,11 @@ a {
 }
 
 .contact-me form .row {
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 
 .contact-me .btn {
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .contact-me img {
