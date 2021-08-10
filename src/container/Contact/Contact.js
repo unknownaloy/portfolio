@@ -4,44 +4,48 @@ import emailjs from "emailjs-com";
 import "./Contact.css";
 import telephone from "../../assets/telephone.svg";
 
-console.log(process.env.REACT_APP_USER_ID, "USER ID");
-console.log(process.env.REACT_APP_SERVICE_ID, "SERVICE");
-console.log(process.env.REACT_APP_ACCESS_TOKEN, "ACCESS TOKEN");
-console.log(process.env.REACT_APP_TEMPLATE_ID, "TEMPLATE ID");
-
 const Contact = () => {
 
+    /// State for the snackbar which displays "success" or "error" message
+    /// during form submission
     const [snackClass, setSnackClass] = useState("");
     const [snackMessage, setSnackMessage] = useState("");
 
+    /// State variables home data for the form input fields
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [heading, setHeading] = useState("");
     const [message, setMessage] = useState("");
 
+    /// State data for the form send button
     const [isSending, setIsSending] = useState(false);
     const [buttonText, setButtonText] = useState("SEND");
 
+    /// Function that handles name input in the form
     const nameHandler = (event) => {
         let tempString = event.target.value;
         setName(tempString);
     }
 
+    /// Function that handles email input in the form
     const emailHandler = (event) => {
         let tempString = event.target.value;
         setEmail(tempString);
     }
 
+    /// Function that handles heading input in the form
     const headingHandler = (event) => {
         let tempString = event.target.value;
         setHeading(tempString);
     }
 
+    /// Function that handles message input in the form
     const messageHandler = (event) => {
         let tempString = event.target.value;
         setMessage(tempString);
     }
 
+    /// This function is used to validate that a form input field does not contain an empty string
     const isInputValid = (value) => {
         let isValid = false;
 
@@ -79,11 +83,15 @@ const Contact = () => {
         }, 3000);
     }
 
-    const resetButtonProperties = () => {
+
+    /// This function resets the button test and makes the button active for clicks
+    const resetButtonToDefaultValues = () => {
         setButtonText("SEND");
         setIsSending(false);
     }
 
+
+    /// This function is responsible for validating and sending the form data using the email client
     const formSubmitHandler = (event) => {
         event.preventDefault();
 
@@ -92,37 +100,37 @@ const Contact = () => {
 
         if (!isInputValid(name) && !isInputValid(email) && !isInputValid(heading) && !isInputValid(message)) {
             snackbarWithMessage("Field cannot be empty");
-            resetButtonProperties();
+            resetButtonToDefaultValues();
             return;
         }
 
         if (!isInputValid(name)) {
             snackbarWithMessage("Please enter your name");
-            resetButtonProperties();
+            resetButtonToDefaultValues();
             return;
         }
 
         if (!isInputValid(email)) {
             snackbarWithMessage("Please enter your email");
-            resetButtonProperties();
+            resetButtonToDefaultValues();
             return;
         }
 
         if (!isInputValid(heading)) {
             snackbarWithMessage("Please give your message a heading");
-            resetButtonProperties();
+            resetButtonToDefaultValues();
             return;
         }
 
         if (!isInputValid(message)) {
             snackbarWithMessage("Please include a message");
-            resetButtonProperties();
+            resetButtonToDefaultValues();
             return;
         }
 
         if (!validateEmail(email)) {
             snackbarWithMessage("Please enter a valid email");
-            resetButtonProperties();
+            resetButtonToDefaultValues();
             return;
         }
 
@@ -134,17 +142,18 @@ const Contact = () => {
         }
 
 
-        emailjs.send(`${process.env.REACT_APP_SERVICE_ID}`, `${process.env.REACT_APP_TEMPLATE_ID}`, emailjsTemplate, `${process.env.REACT_APP_USER_ID}`)
+        emailjs.send(`${process.env.REACT_APP_SERVICE_ID}`, 
+        `${process.env.REACT_APP_TEMPLATE_ID}`, 
+        emailjsTemplate, 
+        `${process.env.REACT_APP_USER_ID}`)
             .then(result => {
                 snackbarWithMessage("Message sent!");
                 clearInputFields();
-                resetButtonProperties();
-                console.log(result);
+                resetButtonToDefaultValues();
             })
             .catch(err => {
                 snackbarWithMessage("Try again! An error occurred");
-                resetButtonProperties();
-                console.log(err);
+                resetButtonToDefaultValues();
             });
     }
 
