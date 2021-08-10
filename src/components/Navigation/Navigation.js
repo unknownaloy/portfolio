@@ -13,12 +13,12 @@ const navigation = (props) => {
                         <li className="nav-item">
                             <a className="nav-link" href="#about">About</a>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <a className="nav-link mr-8" href="#">Projects</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link mr-8" href="blog.html">Blog</a>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <a href="#contact-me"><button type="button" className="btn btn-lg">Contact me</button></a>
                         </li>
