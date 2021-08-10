@@ -1,5 +1,5 @@
 import "./App.css";
-import Layout from "./components/Layout";
+import Layout from "./components/Layout/Layout";
 import Intro from "./components/Intro/Intro";
 import About from "./components/About/About";
 import Contact from "./container/Contact/Contact";

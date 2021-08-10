@@ -20,3 +20,13 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+
+/* .container-fluid {
+	overflow-x: hidden;
+} */
+
+@media (max-width: 768px) {
+    .manLike {
+      overflow-x: hidden;
+    }
+}
